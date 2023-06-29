@@ -1,0 +1,231 @@
+@media only screen and (max-width: 767px) {
+    .text h3 {
+        font-weight: bold;
+        font-size: 4vw;
+    }
+
+    .text {
+        font-size: 0.857rem;
+        top: 13vmax;
+        width: 90%;
+    }
+
+    .j1 {
+        margin: 0px;
+        padding: 1rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .j1 p,
+    .k2 h5,
+    .tc,
+    .gg1 p,
+    .main-bend p,
+    .sel option,
+    .input-container input,
+    .input-container label,
+    .input2 label,.vision p,.mission p{
+        font-size: 0.86rem;
+    }
+
+    .j1 h2,
+    .l1 h2,
+    .k1 h2,
+    #testimonial h3 {
+        font-size: 1.2rem;
+
+    }
+
+    .g0 p,
+    .vision h3,
+    .teamtitle h3,.mission h3,.cog h1 {
+        font-size: 1.5rem;
+    }
+    .g1{
+        margin-right: 2vw;
+    } 
+
+    .option {
+        display: block;
+    }
+
+    .item2 {
+        display: none;
+    }
+
+    .log {
+        display: none;
+    }
+
+    #body,
+    #tab {
+        height: auto;
+    }
+
+    .l2 {
+        width: 100%;
+    }
+
+    /* digitalgeo */
+    .n0 {
+        min-height: 40vmax;
+    }
+
+    .n1 {
+        font-size: 0.857rem;
+        width: 55%;
+        top: 5vmax;
+        left: 42vw;
+    }
+
+    .n1 h3,.name p {
+        font-size: 1.2rem;
+    }
+
+    .n2 {
+        left: -25vmax;
+        top: 33.5vmax;
+        width: 15.5vmax;
+    }
+
+    .buy,
+    .buyrev,
+    .input2 textarea {
+        font-size: 0.8rem;
+    }
+
+    
+    .namerev,
+    .input-container select {
+        font-size: 0.8rem;
+    }
+
+    #embvid p,
+    .z1>p,.cog h4 ,.cog button  {
+        font-size: 1rem;
+    }
+
+    .iframe {
+        height: 10rem;
+    }
+
+    .chg-carousel {
+        font-size: 0.8rem;
+        width: 41vw;
+
+    }
+
+    /* formpage */
+    .z {
+        margin: 5rem 0;
+    }
+
+    .input-container select {
+        width: 30vw;
+        min-height: 1.3rem;
+        height: 3vmax;
+        border: 1px solid white;
+        padding: 0;
+    }
+    .sin-opt{
+        white-space: nowrap;
+        padding:0.7rem;
+    }
+    .inr{
+        top: 27px;
+        left: 44vw;
+        font-size: 1rem;
+    }
+    .z1 button {
+        width: 6rem;
+        padding: 0.3rem 0.5rem;
+        margin: 1.3rem auto;
+        text-align: center;
+        font-size: 0.7rem;
+    }
+
+    .input2 {
+        top: 4.5rem;
+    }
+
+    .input-container {
+        margin: 1.3rem 0.2rem 1.3rem 1rem;
+    }
+
+    /* visionpage */
+    .vision,.mission{
+        padding:0.8rem 1rem;
+    }
+    .teamimg{
+        text-align: center;
+    }
+    .teamimg img{
+        width:10rem;
+        height:14rem;
+    }
+    .teamtext h4,.teamtext2 h4{
+        font-size:1.2rem;
+        margin: 1.1rem 0;
+        text-align: center;
+    }
+    .teamtext,.teamtext2{
+        margin:0.2rem;
+        font-size: 0.86rem;
+    }
+    /* home */
+    .buttonsection .buyrev{
+        width: 80%;
+        display: block;
+        margin:1rem auto;
+    }
+    .buttonsection .buy{
+        width: 80%;
+        display: block;
+        margin:1rem auto;
+    }
+    .mssg1 h2,.mssg2 h2{
+        padding:1rem 0;
+    }
+    .buyform{
+        width:100%;
+    }
+    .input-buynow label{
+        font-size: 1rem;
+        padding:0.5rem 0 0.5rem 0.5rem;
+    }
+    .input-buynow:nth-child(4) span{
+        padding:0;
+    }
+    .buybuttons{
+        margin-top: 0.5rem;
+        width:100%;
+    }
+    .buybuttons label{
+        font-size: 1rem;
+        height:3rem;
+        margin:1rem;
+    }
+    .buybuttons input{
+        font-size: 0.856rem;
+        padding:0.2rem;
+        margin:1rem;
+        width: 40%;
+    }
+    .buysubmit button{
+        font-size: 1rem;
+        padding:0.4rem 1rem;
+    }
+    /* congratulation page */
+    .cog{
+        margin-top: 5rem;
+    }
+    .loop-wrapper{
+        margin-top: 4rem;
+    }
+    .prashant{
+        position: fixed;
+        bottom:5rem;
+        width: 50%;
+    }
+}

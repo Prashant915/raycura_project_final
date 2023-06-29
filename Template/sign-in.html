@@ -1,0 +1,66 @@
+{% include "header.html" %}
+<div class="z">
+    <div class="z1">
+        <p>Contact Us</p><br>
+        {% if error %}
+        <div class="alert alert-danger" role="alert">
+            Please Fill Form Properly.
+        </div>
+        {% endif %}
+        {% if success %}
+        <div class="alert alert-success" role="alert">
+            You have filled form successfully !
+        </div>
+        {% endif %}
+        <form action="{% url 'signin' %}" method="post">
+            {% csrf_token %}
+            <div class="input-container">
+                <input type="text" id="name" autofocus name="First name" required area-required="true" />
+                <label>Name<span>*</span></label>
+            </div>
+            {% if error3 %}
+            <div class="alert alert-danger" role="alert">
+                Please fill I AM feild
+            </div>
+            {% endif %}
+            <div class="input-container">
+                <label class="difflabel" for="docpat">I AM <span>*</span></label><br>
+                <select class="form-select sel" name="docpat" required>
+                    <li><option class="sin-opt" selected>Please Select</option></li>
+                    <li><option class="sin-opt" value="Medical Professional">Medical Professional</option></li>
+                    <li><option class="sin-opt" value="Patient">Patient</option></li>
+                    <li><option class="sin-opt" value="Industrial Person">Industrial Person</option></li>
+                    <li><option class="sin-opt" value="Looking For Job/Internship">Looking For Job/Internship</option></li>
+                    <li><option class="sin-opt" value="Other">Other</option></li>
+                </select>
+            </div>
+            {% if error2 %}
+            <div class="alert alert-danger" role="alert">
+                Please Fill Email Properly.
+            </div>
+            {% endif %}
+            <div class="input-container">
+                <input type="text" name="Email" required id="emails" autocomplete="off" area-required="true" />
+                <label>Email<span>*</span></label>
+            </div>
+            {% if error4 %}
+            <div class="alert alert-danger" role="alert">
+                Please fill Correct Mobile Number!
+            </div>
+            {% endif %}
+            <div class="input-container">
+                <input type="text" name="Contact" required id="mobileNumber" autocomplete="off" area-required="true" />
+                <label>Contact No <span>*</span></label>
+            </div>
+            <button name="submit" type="submit">Submit</button>
+    </div>
+    <div class="z2">
+        <div class="input2">
+            <textarea type="text" name="Message" required rows="10" cols="82" id="mssg" autocomplete="off"
+                area-required="false"></textarea>
+            <label>Your Message</label>
+        </div>
+    </div>
+    </form>
+</div>
+{% include 'footer.html' %}

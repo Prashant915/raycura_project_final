@@ -1,0 +1,140 @@
+{% include "header.html" %}
+<div class="n0">
+    <div class="row" style="--bs-gutter-x: -0.5rem;">
+        <div class="col-md-7 n1 lineUp p-0">
+            <h3>Go Neo</h3><br>
+            <p>This is a Digital Goniometer helps physician to take measures single handed, that too with precision by
+                minimizing visual inspection errors . Powered by 2 AAA.
+            </p>
+        </div>
+        <div class="col-md-5 n2">
+            <a href="{% url 'buynow' %}" style="text-decoration: none;"><button class="buy" style="margin-bottom: 1vw;">BUY NOW</button></a>
+        </div>
+    </div>
+</div>
+<div id="vid2">
+    <video class="animi" loop autoplay muted>
+        <source src="/static/phyvid.mp4" type="video/mp4">
+        <source src="/static/phyvid.mp4" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+</div>
+<div id="body2">
+    <div data-aos="zoom-in" class="k1">
+        <h2>Benefits of Extend System</h2>
+    </div>
+    <div class="row g-0">
+        <div data-aos="zoom-in" class="col-6 col-md-4">
+            <img src="/static/quickmeasurement.png" class="info"></img>
+            <!-- <h5>No Pin Site Infection</h5> -->
+        </div>
+        <div data-aos="zoom-in" class="col-6 col-md-4">
+            <img src="/static/ben2.png" class="info"></img>
+            <!-- <h5>Light Weight</h5> -->
+        </div>
+        <div data-aos="zoom-in" class="col-6 col-md-4">
+            <img src="/static/singlehanduse.png" class="info"></img>
+            <!-- <h5>Weight Bearing</h5> -->
+        </div>
+        <div data-aos="zoom-in" class="col-6 col-md-4">
+            <img src="/static/long lasting.png" class="info"></img>
+            <!-- <h5>Fewer Procedures</h5> -->
+        </div>
+        <div data-aos="zoom-in" class="col-6 col-md-4">
+            <img src="/static/savereading.png" class="info"></img>
+            <!-- <h5>Sizes That Fits You</h5> -->
+        </div>
+        <div data-aos="zoom-in" class="col-6 col-md-4">
+            <img src="/static/bigdiaplay.png" class="info"></img>
+            <!-- <h5>Less Medication</h5> -->
+        </div>
+    </div>
+</div>
+<div class="row g-0" id="space">
+    <div class="col-md-6 name">
+        <p>Raycura GO NEO Digital Goniometer</p>
+    </div>
+    <div class="col-md-6">
+        <a href="{% url 'buynow' %}" style="text-decoration: none;"><button class="buy" style="margin-bottom: 1vw;">BUY NOW</button></a>
+    </div>
+</div>
+<div id="embvid">
+    <p>1 Minute Tutorials</p>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner mt-4">
+            {% for i in show %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="container-fluid">
+                    <div class="row g-1 flex-nowrap">
+                        <div class="col-sm-6 iframepar">
+                            <iframe class="d-block iframe" src="{{i.link_1}}" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="col-sm-6 iframepar">
+                            <iframe class="d-block iframe" src="{{i.link_2}}" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div id="testimonial">
+    <h3>Testimonials</h3>
+    <div class="testi">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner mt-4">
+                {% for j in testi %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6 testipar">
+                                <div class="d-block chg-carousel">
+                                    <p> {{j.description_1}}
+                                    </p>
+                                    <p>-{{j.name_1}}</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 testipar">
+                                <div class="d-block chg-carousel">
+                                    <p> {{j.description_2}}
+                                    </p>
+                                    <p>-{{j.name_2}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<div id="spacerev">
+    <div class="namerev">
+        <p>Raycura GO NEO Digital Goniometer</p>
+    </div>
+    <div>
+        <a href="{% url 'buynow' %}" style="text-decoration: none;"><button class="buyrev">BUY NOW</button></a>
+    </div>
+</div>
+{% include "footer.html" %}
+</body>
+</html>
