@@ -74,9 +74,9 @@
 
     .n1 {
         font-size: 0.857rem;
-        width: 55%;
+        width: 65%;
         top: 5vmax;
-        left: 42vw;
+        left: 5vw;
     }
 
     .n1 h3,.name p {
@@ -84,8 +84,8 @@
     }
 
     .n2 {
-        left: -25vmax;
-        top: 33.5vmax;
+        right: 49vw;
+        top: 33vmax;
         width: 15.5vmax;
     }
 

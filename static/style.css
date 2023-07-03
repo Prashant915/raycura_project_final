@@ -38,7 +38,14 @@ video {
 }
 
 .mssg1ph img {
+    width: 40%;
+    display: block;
+    margin: auto;
+}
+.mssg1ph2 img{
     width: 100%;
+    display: block;
+    margin: 8rem auto;
 }
 
 #home2 {
@@ -57,18 +64,17 @@ video {
 
 /* Digital Goniometer page */
 .n0 {
-    background: url(tempimagego.png) no-repeat center center/cover;
-    width: 100%;
+    background: url(goneo.png) no-repeat center center/cover;
+    width: 100vw;
     height: 36vmax;
     z-index: -1;
-    margin-bottom: 0.8rem;
 }
 
 .n1 {
-    color: rgb(51, 179, 166);
+    color: white;
     font-size: 1rem;
     position: relative;
-    top: 21vmax;
+    top: 10vmax;
     left: 6vmax;
     text-align: justify;
     /* width: 40%; */
@@ -82,7 +88,7 @@ video {
     position: relative;
     width: 15vmax;
     top: 27vmax;
-    left: 15vw;
+    right: 52vw;
 }
 
 .buy {
@@ -124,7 +130,7 @@ video {
 
 #vid2 {
     width: 100%;
-    margin: 1vw 0rem;
+    margin: 0rem;
 }
 
 .animi {
@@ -241,7 +247,7 @@ video {
 }
 
 .buyrev {
-    padding: 1.2vw 2.4vw;
+    padding: 1.2vw 2.8vw;
     background-color: white;
     color: rgb(51, 179, 166);
     font-size: 1rem;
