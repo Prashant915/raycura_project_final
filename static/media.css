@@ -1,7 +1,22 @@
 @media only screen and (max-width: 767px) {
+    .imga{
+        background: url(nailtibiarender.jpg) no-repeat center center/contain;
+    }
+    .imga2{
+        background: url(newextendtransportnail.png) no-repeat center center/cover;
+    }
+    .imga3{
+        background:  url(lengthplate.jpg) no-repeat center center/contain;
+    }
+    .imga4{
+        background: url(transport.jpg) no-repeat center center/contain;
+    }
     .text h3 {
         font-weight: bold;
         font-size: 4vw;
+        position: relative;
+        bottom:11vw;
+
     }
 
     .text {
