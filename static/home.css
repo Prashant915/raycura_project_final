@@ -172,7 +172,7 @@
 .y1{
     display: none;
     position: absolute;
-    top: 115px;
+    top: 9vw;
     right: -12rem;
     width: 491px;
     height: 100%;
@@ -522,11 +522,11 @@
 .social{
     text-align: end;
 }
-.social i{
+.social a i{
     margin:1vmax;
     color: orange;
 }
-.social i:nth-child(4){
+.social a i:nth-child(4){
     margin-right: 5vmax;
 }
 .main-bend hr{

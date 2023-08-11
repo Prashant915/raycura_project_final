@@ -89,11 +89,12 @@
     /* digitalgeo */
     .n0 {
         min-height: 40vmax;
+        background-size: 100% 100%;
     }
 
     .n1 {
         font-size: 0.857rem;
-        width: 65%;
+        width: 62%;
         top: 5vmax;
         left: 5vw;
     }
