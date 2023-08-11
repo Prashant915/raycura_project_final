@@ -97,6 +97,7 @@
 }
 .imga4{
     background: url(transport.jpg) no-repeat center center/cover;
+    height: 72vh;
 }
 .text{
     color:rgb(51, 179, 166);
@@ -334,6 +335,13 @@
     align-items: center;
     justify-content: space-between;
 }
+#ggp{
+    display: flex;
+    height:auto;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
 /* build better bones part */
 .g0{
     width: 44%;
@@ -369,6 +377,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.only{
+    height:16vmax;
 }
 .gg1 p{
     font-size: 2vw;

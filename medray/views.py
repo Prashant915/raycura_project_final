@@ -41,7 +41,7 @@ def buynow(request):
         ref=ref_code.objects.all()
         if request.POST.get("customer_name") == "" or request.POST["customer_name"].isdigit() == True:
             return render(request, "buynow.html", {"bname": True})
-        elif len(request.POST.get("pincode")) > 6 or len(request.POST.get("pincode")) < 6 or request.POST.get("pincode")[0]!=0:
+        elif len(request.POST.get("pincode")) > 6 or len(request.POST.get("pincode")) < 6:
             return render(request, "buynow.html", {"pincode": True})
         elif len(request.POST.get("phonenumber")) > 10 or len(request.POST.get("phonenumber")) < 10 or request.POST["phonenumber"].isdigit() == False:
             return render(request, "buynow.html", {"phone": True})

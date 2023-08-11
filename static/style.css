@@ -42,6 +42,10 @@ video {
     display: block;
     margin: auto;
 }
+.okk img {
+    width: 92%;
+    margin: 8rem auto;
+}
 .mssg1ph2 img{
     width: 100%;
     display: block;
