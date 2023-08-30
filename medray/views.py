@@ -39,14 +39,14 @@ def buynow(request):
     f_amount=int(amu[0].Product_Amount)
     if request.method == "POST":
         ref=ref_code.objects.all()
-        if request.POST.get("customer_name") == "" or request.POST["customer_name"].isdigit() == True:
-            return render(request, "buynow.html", {"bname": True})
-        elif len(request.POST.get("pincode")) > 6 or len(request.POST.get("pincode")) < 6:
-            return render(request, "buynow.html", {"pincode": True})
-        elif len(request.POST.get("phonenumber")) > 10 or len(request.POST.get("phonenumber")) < 10 or request.POST["phonenumber"].isdigit() == False:
-            return render(request, "buynow.html", {"phone": True})
-        elif request.POST.get("quantity") == "0":
-            return render(request, "buynow.html", {"quant": True})
+        # if request.POST.get("customer_name") == "" or request.POST["customer_name"].isdigit() == True:
+        #     return render(request, "buynow.html", {"bname": True})
+        # elif len(request.POST.get("pincode")) > 6 or len(request.POST.get("pincode")) < 6:
+        #     return render(request, "buynow.html", {"pincode": True})
+        # elif len(request.POST.get("phonenumber")) > 10 or len(request.POST.get("phonenumber")) < 10 or request.POST["phonenumber"].isdigit() == False:
+        #     return render(request, "buynow.html", {"phone": True})
+        # elif request.POST.get("quantity") == "0":
+        #     return render(request, "buynow.html", {"quant": True})
         bname = request.POST.get("customer_name")
         shipping_address = request.POST.get("shipping_address")
         pincode = request.POST.get("pincode")
@@ -60,10 +60,34 @@ def buynow(request):
             if ref[i].Referral_Code==refcode:
                 Price=Price-(int(ref[i].Amount_reduction)*int(quantity))
                 break
-        all_data = Customer_order(Name=bname, Shipping_Address=shipping_address, Pincode=pincode,
-                                  Mobile_Number=phonenumber, Billing_to=billto, Billing_Address=billaddress,refcode=refcode, Product_Required=quantity,Price=Price)
-        all_data.save()
-        return redirect("/application-received/")
+        dicti={
+            "f_amount":f_amount,
+            "bbname":bname,
+            "shipping":shipping_address,
+            "pincodee":pincode,
+            "phonenumber":phonenumber,
+            "billto":billto,
+            "billadd":billaddress,
+            "quantity":quantity,
+            "refcode":refcode
+        }
+        if bname == "" or bname.isdigit() == True:
+            dicti["bname"]= True
+            return render(request, "buynow.html", dicti)
+        elif len(pincode) > 6 or len(pincode) < 6:
+            dicti["pincode"]=True
+            return render(request, "buynow.html", dicti)
+        elif len(phonenumber) > 10 or len(phonenumber) < 10 or phonenumber.isdigit() == False:
+            dicti["phone"]=True
+            return render(request, "buynow.html", dicti)
+        elif quantity == "0":
+            dicti["quant"]=True
+            return render(request, "buynow.html", dicti)
+        else:
+            all_data = Customer_order(Name=bname, Shipping_Address=shipping_address, Pincode=pincode,
+                                    Mobile_Number=phonenumber, Billing_to=billto, Billing_Address=billaddress,refcode=refcode, Product_Required=quantity,Price=Price)
+            all_data.save()
+            return redirect("/application-received/")
     return render(request, "buynow.html",{"f_amount":f_amount})
 
 

@@ -9,30 +9,30 @@
             {% csrf_token %}
             <div class="input-buynow">
                 <label>Name *:</label><br>
-                <input type="text" id="bname" name="customer_name" {% if bname %}placeholder="Please enter your name" {% endif %} autofocus autocomplete="off" area-required="true" />
+                <input type="text" id="bname" {% if not bname %}value="{{ bbname }}" {% endif %}name="customer_name" {% if bname %}placeholder="Please enter your name" {% endif %} autofocus autocomplete="off" area-required="true" />
             </div>
             <div class="input-buynow">
                 <label>Shipping Address *:</label><br>
-                <input type="text" id="bname" name="shipping_address" required autocomplete="off"
+                <input type="text" id="bname" value="{{ shipping }}" name="shipping_address" required autocomplete="off"
                     area-required="true" />
             </div>
             <div class="input-buynow">
                 <label>Pincode *:</label><br>
-                <input type="text" id="bname" name="pincode" {% if pincode %}placeholder="Please enter correct pincode"
+                <input type="text" id="bname" {% if not pincode %}value="{{ pincodee }}"{% endif %}name="pincode" {% if pincode %}placeholder="Please enter correct pincode"
                     {% endif %} required autocomplete="off" area-required="true" />
             </div>
             <div class="input-buynow">
                 <label>Phone No *:</label><br>
-                <span>+91</span><input type="text" name="phonenumber" {% if phone %}placeholder="Please enter correct phone number" {% endif %} id="bname" required autocomplete="off"
+                <span>+91</span><input type="text" {% if not phone %}value="{{ phonenumber }}"{% endif %}name="phonenumber" {% if phone %}placeholder="Please enter correct phone number" {% endif %} id="bname" required autocomplete="off"
                     area-required="true" />
             </div>
             <div class="input-buynow">
                 <label>Bill to *:</label><br>
-                <input type="text" id="bname" name="billto" required autocomplete="off" area-required="true" />
+                <input type="text" id="bname" value="{{ billto }}" name="billto" required autocomplete="off" area-required="true" />
             </div>
             <div class="input-buynow">
                 <label>Billing Address *:</label><br>
-                <input type="text" id="bname" name="billaddress" required autocomplete="off" area-required="true" />
+                <input type="text" id="bname" value="{{ billadd }}" name="billaddress" required autocomplete="off" area-required="true" />
             </div>
             <div id="bbuttons">
                 <div class="buybuttons">
@@ -42,12 +42,12 @@
                 </div>
                 <div class="buybuttons">
                     <label for="quantity">Quantity *</label>
-                    <input type="number" oninput="cal()" name="quantity" id="quant"  min="1" {% if quant %}placeholder="value > 0"{% endif %}>
+                    <input type="number" value="{{ quantity }}" oninput="cal()" name="quantity" id="quant"  min="1" {% if quant %}placeholder="value > 0"{% endif %}>
                 </div>
                 <div class="buybuttons">
                     <label for="refcode">Refcode</label>
                     <i class="fa-solid fa-square-check"></i>
-                    <input type="text" class="refcode" name="refcode" placeholder="If Any">
+                    <input type="text" value="{{ refcode }}" class="refcode" name="refcode" placeholder="If Any">
                 </div>
                 <div class="buybuttons">
                     <label>Total</label>
